@@ -11,12 +11,10 @@ import androidx.compose.ui.unit.*
 import androidx.navigation.*
 import com.example.filestatistics.present.*
 import com.example.filestatistics.present.UI.theme.*
-import com.example.testapphostel.present.*
-import com.example.testapphostel.present.UI.theme.*
 import kotlinx.coroutines.*
 
 @Composable
-fun Splash(myViewModel: myViewModel,navController: NavController) {
+fun Splash(myViewModel: MyViewModel, navController: NavController) {
     var isLoad = myViewModel.isLoadFile.collectAsState()
 
 

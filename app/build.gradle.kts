@@ -78,4 +78,16 @@ dependencies {
     annotationProcessor("androidx.room:room-compiler:2.5.2")
     ksp("androidx.room:room-compiler:2.5.2")
 
+    //retrofit
+    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.11.0")
+    implementation ("com.github.skydoves:sandwich:1.3.9")
+
+    //Nav
+    implementation ("androidx.navigation:navigation-compose:2.6.0")
+
+    //Coil
+    implementation("io.coil-kt:coil-compose:2.4.0")
+    implementation("io.coil-kt:coil-svg:2.4.0")
 }
