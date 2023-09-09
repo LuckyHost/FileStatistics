@@ -1,5 +1,7 @@
 package com.example.filestatistics.data.DI
 
+import com.example.filestatistics.data.Net.*
+import com.example.filestatistics.data.Net.Constante.BASE_URL
 import com.skydoves.sandwich.adapters.*
 import dagger.Module
 import dagger.Provides
@@ -20,7 +22,7 @@ object ModuleNET {
     fun provideReteofit(okHttpClient: OkHttpClient): Retrofit {
 
         return Retrofit.Builder()
-            .baseUrl("https://run.mocky.io")
+            .baseUrl(BASE_URL)
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(ApiResponseCallAdapterFactory.create())
@@ -38,9 +40,9 @@ object ModuleNET {
             .build()
     }
 
-   /* @Singleton
+    @Singleton
     @Provides
-    fun provideAPIService(retrofit: Retrofit): APIService {
-        return retrofit.create(APIService::class.java)
-    }*/
+    fun provideAPIService(retrofit: Retrofit): ApiService {
+        return retrofit.create(ApiService::class.java)
+    }
 }
